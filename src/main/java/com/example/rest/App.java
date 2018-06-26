@@ -51,16 +51,16 @@ public class App {
  
     	// sample URL
         String url = "http://140.86.15.104:3000/shield/45/33/pink/MartinosOracle1";
-        String url = "http://140.86.15.104:3000/shield/45/0/pink/MartinosOracle1";
-        String url = "http://140.86.15.104:3000/shield/45/1/pink/MartinosOracle1";
-        String url = "http://140.86.15.104:3000/shield/45/2/pink/MartinosOracle1";
-        String url = "http://140.86.15.104:3000/shield/45/3/pink/MartinosOracle1";
-        String url = "http://140.86.15.104:3000/shield/45/4/pink/MartinosOracle1";
-        String url = "http://140.86.15.104:3000/shield/45/5/pink/MartinosOracle1";
-        String url = "http://140.86.15.104:3000/shield/45/6/pink/MartinosOracle1";
-        String url = "http://140.86.15.104:3000/shield/45/7/pink/MartinosOracle1";
-        String url = "http://140.86.15.104:3000/shield/45/8/pink/MartinosOracle1";
-        String url = "http://140.86.15.104:3000/shield/45/9/pink/MartinosOracle1";
+        String url0 = "http://140.86.15.104:3000/shield/45/0/pink/MartinosOracle1";
+        String url1 = "http://140.86.15.104:3000/shield/45/1/pink/MartinosOracle1";
+        String url2 = "http://140.86.15.104:3000/shield/45/2/pink/MartinosOracle1";
+        String url3 = "http://140.86.15.104:3000/shield/45/3/pink/MartinosOracle1";
+        String url4 = "http://140.86.15.104:3000/shield/45/4/pink/MartinosOracle1";
+        String url5 = "http://140.86.15.104:3000/shield/45/5/pink/MartinosOracle1";
+        String url6 = "http://140.86.15.104:3000/shield/45/6/pink/MartinosOracle1";
+        String url7 = "http://140.86.15.104:3000/shield/45/7/pink/MartinosOracle1";
+        String url8 = "http://140.86.15.104:3000/shield/45/8/pink/MartinosOracle1";
+        String url9 = "http://140.86.15.104:3000/shield/45/9/pink/MartinosOracle1";
         CloseableHttpResponse response = null;
  
         try {
