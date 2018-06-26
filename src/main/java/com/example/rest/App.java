@@ -1,31 +1,32 @@
 /* Copyright © 2016 Oracle and/or its affiliates. All rights reserved. */
+// My microservice!
 package com.example.rest;
- 
+
 import java.util.Optional;
 import java.util.Properties;
 import java.io.IOException;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
- 
+
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.util.EntityUtils;
- 
+
 @SpringBootApplication
 public class App {
- 
+
     // Get PORT and HOST from Environment or set default
     public static final Optional<String> host;
     public static final Optional<String> port;
     public static final Properties myProps = new Properties();
- 
+
     static {
         host = Optional.ofNullable(System.getenv("HOSTNAME"));
         port = Optional.ofNullable(System.getenv("PORT"));
     }
- 
+
     /**
      * Start the server.
      */
@@ -33,55 +34,56 @@ public class App {
         // Set properties
         myProps.setProperty("server.address", host.orElse("localhost"));
         myProps.setProperty("server.port", port.orElse("8080"));
- 
+
         SpringApplication app = new SpringApplication(App.class);
         app.setDefaultProperties(myProps);
         app.run(args);
- 
+
         System.out.println("Server started");
- 
-        //runGetRequest();
-        //runDatabaseQuery();
+
+        runGetRequest();
+        runDatabaseQuery();
     }
- 
+
     /**
      * Performs a simple GET request and prints the result to the log.
      */
     private static void runGetRequest() {
- 
-    	// sample URL
-        String url = "http://140.86.15.104:3000/shield/45/33/pink/MartinosOracle1";
-        String url0 = "http://140.86.15.104:3000/shield/45/0/pink/MartinosOracle1";
-        String url1 = "http://140.86.15.104:3000/shield/45/1/pink/MartinosOracle1";
-        String url2 = "http://140.86.15.104:3000/shield/45/2/pink/MartinosOracle1";
-        String url3 = "http://140.86.15.104:3000/shield/45/3/pink/MartinosOracle1";
-        String url4 = "http://140.86.15.104:3000/shield/45/4/pink/MartinosOracle1";
-        String url5 = "http://140.86.15.104:3000/shield/45/5/pink/MartinosOracle1";
-        String url6 = "http://140.86.15.104:3000/shield/45/6/pink/MartinosOracle1";
-        String url7 = "http://140.86.15.104:3000/shield/45/7/pink/MartinosOracle1";
-        String url8 = "http://140.86.15.104:3000/shield/45/8/pink/MartinosOracle1";
-        String url9 = "http://140.86.15.104:3000/shield/45/9/pink/MartinosOracle1";
+
+  
+               for (int i=9; i>=0; i--)
+     {
+        String dummyStr = String.valueOf(i); 
+        String url = "http://140.86.15.104:3000/fighters/45/" + dummyStr + "/pink/MartinosOracle1/";
+
         CloseableHttpResponse response = null;
- 
+
         try {
             CloseableHttpClient httpclient = HttpClients.createDefault();
             HttpGet httpGet = new HttpGet(url);
             response = httpclient.execute(httpGet);
             String content = EntityUtils.toString(response.getEntity());
             System.out.println("Server response: " + content);
-        } catch (IOException e) {
+        } catch (IOException e) 
+        {
             System.out.println(e);
-        } finally {
-            try {
-                if (response != null) {
+        } finally 
+        
+        {
+            try 
+            {
+                if (response != null) 
+                   {
                     response.close();
-                }
-            } catch (IOException ie) {
-                System.out.println(ie);
-            }
+                   }
+            } catch (IOException ie) 
+                   {
+                     System.out.println(ie);
+                   }
         }    
     }
- 
+    }
+
     /**
      * Performs a call to the database.
      */
