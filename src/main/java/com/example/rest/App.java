@@ -51,6 +51,16 @@ public class App {
  
     	// sample URL
         String url = "http://140.86.15.104:3000/shield/45/33/pink/MartinosOracle1";
+        String url = "http://140.86.15.104:3000/shield/45/0/pink/MartinosOracle1";
+        String url = "http://140.86.15.104:3000/shield/45/1/pink/MartinosOracle1";
+        String url = "http://140.86.15.104:3000/shield/45/2/pink/MartinosOracle1";
+        String url = "http://140.86.15.104:3000/shield/45/3/pink/MartinosOracle1";
+        String url = "http://140.86.15.104:3000/shield/45/4/pink/MartinosOracle1";
+        String url = "http://140.86.15.104:3000/shield/45/5/pink/MartinosOracle1";
+        String url = "http://140.86.15.104:3000/shield/45/6/pink/MartinosOracle1";
+        String url = "http://140.86.15.104:3000/shield/45/7/pink/MartinosOracle1";
+        String url = "http://140.86.15.104:3000/shield/45/8/pink/MartinosOracle1";
+        String url = "http://140.86.15.104:3000/shield/45/9/pink/MartinosOracle1";
         CloseableHttpResponse response = null;
  
         try {
